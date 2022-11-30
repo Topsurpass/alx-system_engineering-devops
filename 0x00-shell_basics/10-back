@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-cd /var
-=======
-cd ../var
->>>>>>> 36a788c863fe687f1284d77875fa6a09a93eb13c
+cd -
