@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays the content of the current working directory in
+# a list format
+
+w_dir="$(pwd)"
+
+for _ in $w_dir; do
+	ls "$w_dir" | cut -d "-" -f2
+done

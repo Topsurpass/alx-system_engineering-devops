@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display visitor IP along with the HTTP status code from the
+# Apache log file and group them and prefixing them with their
+# number of times they occor
+
+FILE=apache-access.log
+
+awk '{print $1 " " $9}' $FILE | sort | uniq -c | sort -rn

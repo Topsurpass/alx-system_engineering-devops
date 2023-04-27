@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This displays number for 1 - 100. If number is a factor of 3
+# display Fizz, if 5 display Buzz, if 3 and 5, display FizzBuzz
+
+
+for i in {1..100}; do
+	if (( i % 3 == 0 && i % 5 == 0 )); then
+		echo "FizzBuzz"
+	elif (( i % 3 == 0 )); then
+		echo "Fizz"
+	elif (( i % 5 == 0 )); then
+		echo "Buzz"
+	else
+		echo $i
+	fi
+done

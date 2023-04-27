@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This Bash script tells a story of passwd by displaying
+# the content of the file /etc/passwd using while loop + IFS
+
+FILE=/etc/passwd
+
+IFS=:
+
+while read -r USER PASS U_ID G_ID U_ID_INFO H_DIR CMD; do
+	echo "The user $USER is part of the $G_ID gang, \
+lives in $H_DIR and rides $CMD. $U_ID's place is \
+protected by the passcode $PASS, more info about the user here: $U_ID_INFO"
+
+done < $FILE
+	
