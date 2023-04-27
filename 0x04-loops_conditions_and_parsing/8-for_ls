@@ -2,8 +2,8 @@
 # Displays the content of the current working directory in
 # a list format
 
-w_dir="$(pwd)"
+FILES="$(ls)"
 
-for _ in $w_dir; do
-	ls "$w_dir" | cut -d "-" -f2
+for i in $FILES; do
+	echo "$i" | cut -d "-" -f2
 done
