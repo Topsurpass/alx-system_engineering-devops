@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Stops infinite loop by sending kill command to its PID
+
+
+infinite_loop=$(pgrep -f "4-to_infinity_and_beyond")
+
+kill "$infinite_loop"
+

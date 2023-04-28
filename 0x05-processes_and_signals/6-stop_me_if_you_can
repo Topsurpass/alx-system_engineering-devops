@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Stops infinite loop without using kill or killall command
+
+
+infinite_loop="4-to_infinity_and_beyond"
+
+pkill -f "$infinite_loop"
+

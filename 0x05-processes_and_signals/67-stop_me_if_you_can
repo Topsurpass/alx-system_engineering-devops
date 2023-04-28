@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Stops infinite loop without using kill or killall command
+
+
+infinite_loop="7-highlander"
+
+pkill -f "$infinite_loop"
+

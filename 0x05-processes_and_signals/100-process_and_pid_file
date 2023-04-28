@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Create a file, echo  "To infinity and beyond" indefinitely
+# display "Ihate the kill command" when SIGTERM is trapped
+# display "Y U no love me?!" when SIGINT is received and deletes
+# the file
+
+FILE=/var/run/myscript.pid
+rm_n_exit()
+{
+	rm -f $FILE;
+	exit
+}
+trap "echo 'Y U no love me?!'" SIGINT
+trap "echo 'I hate the kill command' && rm_n_exit" SIGTERM
+trap "echo 'I hate the kill command' && rm_n_exit" SIGQUIT
+
+echo $$ >> $FILE
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

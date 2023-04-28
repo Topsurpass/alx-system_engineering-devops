@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# A bash (init) script that manages manage_my_process
+
+FILE="/var/run/my_process.pid"
+
+start_n_disp()
+{
+	sudo ./manage_my_process &
+	echo $! > $FILE
+}
+stop_n_disp()
+{
+	sudo pkill -f  "./manage_my_process"
+	rm $FILE
+}
+
+if [ $# -eq 0 ]; then
+	echo "Usage: manage_my_process {start|stop|restart}"
+
+elif [ "$1" == "start" ]; then
+	echo "manage_my_process started";
+	start_n_disp
+
+elif [ "$1" == "stop" ]; then
+	echo "mange_my_process stopped";
+	stop_n_disp
+
+elif [ "$1" == "restart" ]; then
+	echo "manage_my_process restarted"
+	if [ -e $FILE ]; then
+		stop_n_disp
+	fi
+	start_n_disp
+fi
