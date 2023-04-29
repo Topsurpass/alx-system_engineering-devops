@@ -19,7 +19,7 @@ if [ "$1" == "start" ]; then
 	start_n_disp
 
 	elif [ "$1" == "stop" ]; then
-		echo "mange_my_process stopped";
+		echo "manage_my_process stopped";
 		stop_n_disp
 
 	elif [ "$1" == "restart" ]; then
