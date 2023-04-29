@@ -5,13 +5,13 @@ FILE="/var/run/my_process.pid"
 
 start_n_disp()
 {
-	sudo ./manage_my_process &
-	echo $! > $FILE
+	./manage_my_process &
+	echo "$!" > "$FILE"
 }
 stop_n_disp()
 {
 	sudo pkill -f  "./manage_my_process"
-	rm $FILE
+	rm "$FILE"
 }
 
 if [ $# -eq 0 ]; then
@@ -27,8 +27,6 @@ elif [ "$1" == "stop" ]; then
 
 elif [ "$1" == "restart" ]; then
 	echo "manage_my_process restarted"
-	if [ -e $FILE ]; then
-		stop_n_disp
-	fi
+	stop_n_disp
 	start_n_disp
 fi
