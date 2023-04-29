@@ -14,19 +14,18 @@ stop_n_disp()
 	rm "$FILE"
 }
 
-if [ $# -eq 0 ]; then
-	echo "Usage: manage_my_process {start|stop|restart}"
-
-elif [ "$1" == "start" ]; then
+if [ "$1" == "start" ]; then
 	echo "manage_my_process started";
 	start_n_disp
 
-elif [ "$1" == "stop" ]; then
-	echo "mange_my_process stopped";
-	stop_n_disp
+	elif [ "$1" == "stop" ]; then
+		echo "mange_my_process stopped";
+		stop_n_disp
 
-elif [ "$1" == "restart" ]; then
-	echo "manage_my_process restarted"
-	stop_n_disp
-	start_n_disp
+	elif [ "$1" == "restart" ]; then
+		echo "manage_my_process restarted"
+		stop_n_disp
+		start_n_disp
+	else
+		echo "Usage: manage_my_process {start|stop|restart}"
 fi
