@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-#Configure Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
-MY_PATH="/etc/nginx/sites-available/default"
+# configuring Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
 apt-get -y update
 apt-get -y install nginx
-echo "Hello World" | sudo tee /var/www/html/index.html > /dev/null
-sed -i '46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' $MY_PATH
+echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
-sed -i "46i error_page 404 /custom_404.html;" $MY_PATH
+sed -i "46i error_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 service nginx restart
