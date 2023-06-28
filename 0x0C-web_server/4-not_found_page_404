@@ -4,7 +4,6 @@
 MY_PATH="/etc/nginx/sites-available/default"
 sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
 echo "Hello World" | sudo tee /var/www/html/index.html > /dev/null
 sudo sed -i '46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' $MY_PATH
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
