@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# configuring Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
+
+# Install nginx and start it
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+
+# Adjust firewall to accept traffic from port 80
+sudo ufw allow 'Nginx HTTP'
+
+# Create the html files in /var/www/html/
+echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+
+# add redirection pattern and new location of to redirect to
+sudo sed -i "46i\ \trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+
+# add error html file and add it's content whenever error's found
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
+sudo sed -i "46i\ \terror_page 404 /custom_404.html;" /etc/nginx/sites-available/default
+
+# Add this header in addition to default http response header
+sudo sed -i "46i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+
+service nginx restart
