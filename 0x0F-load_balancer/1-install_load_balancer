@@ -1,23 +1,13 @@
 #!/usr/bin/env bash
-# Install and configure HAproxy on your lb-01 server.
-# Configure HAproxy so that it send traffic to web-01 and web-02
-# Distribute requests using a roundrobin algorithm
-# Make sure that HAproxy can be managed via an init script
-# Make sure that your servers are configured with the right hostnames:
+# Installs and setup haproxy
 
-# update package repo
-sudo apt-get -y update
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.2
+sudo apt-get install -y haproxy=2.2.\*
 
-# Install HAproxy
-sudo apt-get -y install haproxy=2.0.\*
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-# Enable HAProxy service at startup i.e HAproxy can be managed via init script
-sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
-
-# Backup original config file before modifying it
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup
-
-# Append the configuration in the config file
+# Listen to web1 and web2 servers
 echo "
    listen load_balancer
    bind *:80
@@ -29,5 +19,4 @@ echo "
    server 7670-web-02 54.146.64.168:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 
-# Restart HAproxy
-sudo service haproxy start
+service haproxy start
