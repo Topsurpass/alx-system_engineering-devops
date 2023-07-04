@@ -12,6 +12,7 @@ echo "
    listen load_balancer
    bind *:80
    mode http
+   option httpclose
    balance roundrobin
    option forwardfor
    server 7670-web-01 54.237.54.19:80 check
