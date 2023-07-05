@@ -21,5 +21,6 @@ This is how the load balancer works. The load balancer helps to distribute traff
 * [Load-balancing algorithms](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-the-algorithms/ta-p/273759)
 * [Web stack debugging](https://intranet.alxswe.com/concepts/68)
 * [Youtube video First 5 Commands When I Connect on a Linux Server](https://www.youtube.com/watch?v=1_gqlbADaAw&feature=youtu.be)
+* [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 ## Author
 Olowosuyi Temitope
