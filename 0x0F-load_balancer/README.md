@@ -16,10 +16,10 @@ This is how the load balancer works. The load balancer helps to distribute traff
 * Docker
 * HAproxy load balancer using roundrobin algorithm
 ## Project links
-[Load balancer](https://intranet.alxswe.com/concepts/46)
-[Load-balancing](https://www.thegeekstuff.com/2016/01/load-balancer-intro/)
-[Load-balancing algorithms](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-the-algorithms/ta-p/273759)
-[Web stack debugging](https://intranet.alxswe.com/concepts/68)
-[Youtube video First 5 Commands When I Connect on a Linux Server](https://www.youtube.com/watch?v=1_gqlbADaAw&feature=youtu.be)
+* [Load balancer](https://intranet.alxswe.com/concepts/46)
+* [Load-balancing](https://www.thegeekstuff.com/2016/01/load-balancer-intro/)
+* [Load-balancing algorithms](https://community.f5.com/t5/technical-articles/intro-to-load-balancing-for-developers-the-algorithms/ta-p/273759)
+* [Web stack debugging](https://intranet.alxswe.com/concepts/68)
+* [Youtube video First 5 Commands When I Connect on a Linux Server](https://www.youtube.com/watch?v=1_gqlbADaAw&feature=youtu.be)
 ## Author
 Olowosuyi Temitope
