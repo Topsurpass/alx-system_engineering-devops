@@ -1,5 +1,11 @@
 # HTTPS_SSL
 
+# Objectives
+This project has fulfilled the objectives such as knowing:
+* What is HTTPS SSL 2 main roles
+* What is the purpose encrypting traffic
+* What SSL termination means
+
 ## Task 0
 
 What we need to do here is add sub domains(www, lb-01, web-01, web-02) to our domain name(temz.tech) and point the subdomains to the appropriate ip addresses
@@ -26,8 +32,9 @@ We need to go over to our domain administrators that is the get.tech
 ## Task 1
 
 - Make a copy of this script and make it executable
+- The script contains script to install certbox (used to generate SSL certificate)
 
-````
+```
 https://github.com/Topsurpass/alx-system_engineering-devops/blob/master/0x10-https_ssl/certbot
 ```
 - Run the script with sudo
@@ -58,6 +65,20 @@ sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 ```
 https://github.com/Topsurpass/alx-system_engineering-devops/blob/master/0x10-https_ssl/100-redirect_http_to_https 
 ```
+## Project links
 
-# Author
-Olowosuyi Temitope
+* [What is HTTPS?](https://www.instantssl.com/http-vs-https)
+* [What are the 2 main elements that SSL is providing](https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html)
+* [HAProxy SSL termination on Ubuntu16.04](https://docs.ionos.com/cloud/)
+* [SSL termination](https://en.wikipedia.org/wiki/TLS_termination_proxy)
+* [Bash function](https://tldp.org/LDP/abs/html/complexfunct.html)
+* [DNS](https://intranet.alxswe.com/concepts/12)
+* [Web stack debugging](https://intranet.alxswe.com/concepts/68)
+
+## Requirements
+* shellcheck version 0.3.7
+* ubuntu 16.06 LTS
+* certbot
+
+## Author
+* Olowosuyi Temitope
