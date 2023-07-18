@@ -20,8 +20,10 @@ def add_ssh_pub():
     run("cat alx_pub_key >> ./.ssh/authorized_keys")
 
 def create_new_user():
-    """Run sql script in create_user.sql file"""
-    #put("./create_user.sql", "./")
+    """Run sql script in create_user.sql file but replica user is
+    only created on web-01 server alone"""
+    put("./create_user.sql", "./")
+    run("mysql -u root -p < ./create_user.sql")
     put("./replica.sql", "./")
     run("mysql -u root -p < ./replica.sql")
 
