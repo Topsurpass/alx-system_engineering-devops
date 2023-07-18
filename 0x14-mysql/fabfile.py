@@ -21,8 +21,9 @@ def add_ssh_pub():
 
 def create_new_user():
     """Run sql script in create_user.sql file"""
-    put("./create_user.sql", "./")
-    run("mysql -u root -p < ./create_user.sql")
+    #put("./create_user.sql", "./")
+    put("./replica.sql", "./")
+    run("mysql -u root -p < ./replica.sql")
 
 def create_new_table():
     """Create table in the database"""
