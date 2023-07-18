@@ -8,7 +8,8 @@ from fabric.api import *
 
 env.user = "ubuntu"
 #env.hosts = ['54.237.54.19', '54.146.64.168']
-env.hosts = ['54.237.54.19']
+env.hosts = ['54.146.64.168']
+#env.hosts = ['54.237.54.19']
 
 def copy_key():
     """Copy mysql repo publick key to server"""
@@ -31,4 +32,14 @@ def create_new_table():
     """Create table in the database"""
     put("./create_table.sql", "./")
     run("mysql -u root -p < ./create_table.sql")
+
+def copy_config():
+    """Copy mysql primary configuration"""
+    sudo("cp /etc/mysql/mysql.conf.d/mysqld.cnf ./")
+    get("./mysqld.cnf", "./")
+    local("cat mysqld.cnf > 4-mysql_configuration_replica")
+
+def dwnld_file():
+    get("./tyrell_corp.sql", "./")
+    put("./tyrell_corp.sql", "/tmp/")
 
