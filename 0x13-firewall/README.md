@@ -14,6 +14,5 @@ Connection closed by foreign host.
 sylvain@ubuntu$
 ```
 ## Project links
-[Web stack debugging](https://intranet.alxswe.com/concepts/68)
-[What is a firewall](https://en.wikipedia.org/wiki/Firewall_%28computing%29)
-
+* [Web stack debugging](https://intranet.alxswe.com/concepts/68)
+* [What is a firewall](https://en.wikipedia.org/wiki/Firewall_%28computing%29)
