@@ -20,11 +20,11 @@ $ apt-get install -y puppet
 $ gem install puppet-lint
 ```
 ## Project links
-[Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
-[Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html)
-[Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
-[Puppet lint](http://puppet-lint.com/)
-[Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
-[Different resource types for version 5.5](https://www.puppet.com/docs/puppet/5.5/types/exec.html)
+* [Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
+* [Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html)
+* [Puppet’s Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
+* [Puppet lint](http://puppet-lint.com/)
+* [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
+* [Different resource types for version 5.5](https://www.puppet.com/docs/puppet/5.5/types/exec.html)
 ## Author
 Olowosuyi Temitope
