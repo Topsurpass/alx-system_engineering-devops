@@ -36,8 +36,9 @@ if __name__ == "__main__":
     for user in user_dic:
         if user.get("id") == int(emp_id):
             EMPLOYEE_NAME = user.get("name")
+            break
 
-    output = "Employee {} is done with tasks ({}/{}):".format(
+    output = "Employee {} is done with tasks({}/{}):".format(
                     EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS)
     print(output)
     for title in TASK_TITLE:
