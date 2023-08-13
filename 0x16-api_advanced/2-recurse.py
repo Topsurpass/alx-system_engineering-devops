@@ -23,7 +23,7 @@ def recurse(subreddit, hot_list=[], after="tmp"):
     # append top titles to hot_list
     posts_arr = r.json().get('data', {}).get('children', [])
     if not posts_arr:
-        return None
+        return hot_list
     for e in posts_arr:
         hot_list.append(e.get('data').get('title'))
 

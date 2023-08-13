@@ -9,7 +9,7 @@ import requests
 def number_of_subscribers(subreddit):
     """Get total subscriber of a given subreddit"""
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    
+
     headers = requests.utils.default_headers()
     """Change client's User-Agent string to something unique and descriptive
     as required by Reddit API terms"""

@@ -15,9 +15,9 @@ def top_ten(subreddit):
     header.update({"User-Agent": "Temz User Agent Version 1.0"})
     r = requests.get(url, headers=header).json()
     posts_arr = r.get("data", {}).get("children", [])
-    
+
     if not posts_arr:
-        return None
+        print(None)
     else:
         for k in posts_arr:
             print(k.get("data", {}).get("title"), end="\n")
